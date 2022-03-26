@@ -1,16 +1,21 @@
-import React from 'react'
-import { Button, TextInput, View } from 'react-native'
+import React from 'react';
+import {Button, StyleSheet, TextInput, View} from 'react-native';
 
-function TodoInsert() {
+const TodoInsert = () => {
   return (
     <View style={styles.inputContainer}>
-      <TextInput style={styles.input} placholder="Add Item!" placeholderTextColor={"#cbcbcb"} autoCorrect={false} />
+      <TextInput
+        style={styles.input}
+        placeholder="Add an item!"
+        placeholderTextColor={'#999'}
+        autoCorrect={false}
+      />
       <View style={styles.button}>
-        <Button title={"ADD"} />
+        <Button title={'ADD'} />
       </View>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   inputContainer: {
@@ -31,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TodoInsert
+export default TodoInsert;

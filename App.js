@@ -1,20 +1,33 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text, ScrollView} from 'react-native';
-import TodoInsert from './components/TodoInsert';
+import {SafeAreaView, StyleSheet, View, Text, ScrollView, TextInput, Button} from 'react-native';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello Todolist</Text>
       <View style={styles.card}>
-        <TodoInsert />
+        <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          placeholder="Add an item!"
+          placeholderTextColor={'#999'}
+          autoCorrect={false}
+        />
+        <View style={styles.button}>
+          <Button title={'ADD'} />
+        </View>
+    </View>
         <ScrollView>
-          <Text>Todo Item</Text>
+          <View>
+            <Text>TodoList</Text>
+          </View>
         </ScrollView>
       </View>
     </SafeAreaView>
   );
 };
+
+
 
 const styles = StyleSheet.create({
   container: {
